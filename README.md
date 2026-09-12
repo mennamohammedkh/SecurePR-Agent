@@ -17,9 +17,9 @@ This platform acts as an intelligent virtual reviewer that orchestrates multiple
 - **📊 Evaluation Suite**: Built-in benchmark tools for routing evaluation, model comparison, and framework quality metrics.
 - **🖥️ Interactive UI & API**: Streamlit-driven user dashboard combined with CLI utility workflows.
 
+---
 
 ## 🏗️ System Architecture
-
 
 ```mermaid
 graph TD
@@ -54,14 +54,12 @@ graph TD
     style SEC fill:#ea4335,stroke:#fff,stroke-width:2px,color:#fff
     style ML fill:#fbbc05,stroke:#fff,stroke-width:2px,color:#333
     style REF fill:#8e24aa,stroke:#fff,stroke-width:2px,color:#fff
-
-## 📂 Project Structure
-
-```text
-person2_integrated/
+📂 Project Structure
+Plaintext
+SecurePR-Agent/
 ├── README.md                     # Project documentation
 ├── requirements.txt              # System dependencies
-├── evaluation/                   # Evaluation & bench-marking suites
+├── evaluation/                   # Evaluation & benchmarking suites
 │   ├── EVALUATION.md
 │   ├── merge_prediction_comparison.py
 │   └── supervisor_routing_eval.py
@@ -95,8 +93,8 @@ Clone the repository and install the required dependencies:
 
 Bash
 # Clone the repository
-git clone [https://github.com/your-org/code-review-security-ai.git](https://github.com/your-org/code-review-security-ai.git)
-cd person2_integrated
+git clone https://github.com/mennamohammedkh/SecurePR-Agent.git
+cd SecurePR-Agent
 
 # Create a virtual environment
 python -m venv venv
@@ -147,6 +145,3 @@ Vector Indexing & RAG: Local Embeddings & Vector Search
 Web UI: Streamlit
 
 Code Parsing & Security: Custom AST / Static Analysis Analyzers
-
-📜 License
-Distributed under the MIT License. See LICENSE for more information.
