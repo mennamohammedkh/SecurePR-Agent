@@ -17,10 +17,9 @@ This platform acts as an intelligent virtual reviewer that orchestrates multiple
 - **📊 Evaluation Suite**: Built-in benchmark tools for routing evaluation, model comparison, and framework quality metrics.
 - **🖥️ Interactive UI & API**: Streamlit-driven user dashboard combined with CLI utility workflows.
 
----
 
 ## 🏗️ System Architecture
-## 🏗️ System Architecture
+
 
 ```mermaid
 graph TD
