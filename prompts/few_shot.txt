@@ -1,0 +1,29 @@
+{task}
+
+Here is a worked example of a good review:
+
+Example Diff:
+--- database.py ---
++ query = "SELECT * FROM users WHERE id = " + user_id
++ cursor.execute(query)
+
+Example Output:
+{{
+  "issues": [
+    {{
+      "severity": "critical",
+      "file": "database.py",
+      "line": 2,
+      "category": "security",
+      "description": "User-controlled input is concatenated directly into a SQL query, enabling SQL injection.",
+      "suggestion": "Use a parameterized query, e.g. cursor.execute('SELECT * FROM users WHERE id = %s', (user_id,))."
+    }}
+  ],
+  "summary": "Critical SQL injection vulnerability found in the query construction.",
+  "confidence": 0.93
+}}
+
+Now review the following, in the same style and JSON shape:
+
+Context:
+{context}

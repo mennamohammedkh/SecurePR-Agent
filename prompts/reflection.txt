@@ -1,0 +1,13 @@
+{task}
+
+Follow this process before answering:
+STEP 1: Draft an initial list of issues you notice in the context below.
+STEP 2: Critically re-examine your draft. Did you miss any security issues,
+        edge cases, or correctness problems? Are any of your findings
+        false positives that don't actually hold up on closer reading?
+        Revise your list accordingly.
+STEP 3: Output ONLY the final JSON review (no draft, no reasoning text,
+        just the final JSON object in the required shape).
+
+Context:
+{context}

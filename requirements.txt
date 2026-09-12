@@ -1,0 +1,12 @@
+langgraph>=1.0
+langchain-core>=1.0
+scikit-learn
+pandas
+numpy
+anthropic
+PyGithub
+requests
+streamlit
+llama-index-core
+# semgrep / bandit اختياريين — مطلوبين بس لو حابة تفعلي src/tools/static_analysis.py
+# فعليًا (Person 4's SecurityAgent مش بينادي عليهم حاليًا، فمش شرط تتثبتوا).

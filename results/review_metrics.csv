@@ -1,0 +1,9 @@
+pr_id,experiment,pattern,ground_truth_has_issue,predicted_has_issue,bleu,rouge_l,num_issues_found
+1,D,zero_shot,True,True,0.0,0.0,1
+2,D,zero_shot,True,True,0.371,0.314,1
+3,D,zero_shot,False,False,0.1,0.1,0
+4,D,zero_shot,True,True,0.131,0.124,2
+5,D,zero_shot,True,True,0.049,0.06,1
+6,D,zero_shot,False,False,0.164,0.091,0
+7,D,zero_shot,True,True,0.079,0.094,1
+8,D,zero_shot,True,True,0.028,0.039,3
