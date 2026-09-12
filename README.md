@@ -20,34 +20,41 @@ This platform acts as an intelligent virtual reviewer that orchestrates multiple
 ---
 
 ## 🏗️ System Architecture
+## 🏗️ System Architecture
 
-                   +-------------------+
-                   |   Streamlit UI /  |
-                   |    CLI Engine     |
-                   +---------+---------+
-                             |
-                             v
-                   +-------------------+
-                   |  Supervisor Agent |
-                   +---------+---------+
-                             |
-    +------------------------+------------------------+
-    |                        |                        |
-    v                        v                        v
-+---------------+        +---------------+        +---------------+
-| Code Review   |        | Security &    |        | PR Merge      |
-| Agent (RAG)   |        | Risk Agent    |        | Predictor(ML) |
-+-------+-------+        +-------+-------+        +-------+-------+
-|                        |                        |
-+------------------------+------------------------+
-|
-v
-+-------------------+
-| Reflection &      |
-| Output Guardrails |
-+-------------------+
+```mermaid
+graph TD
+    %% User Interface Layer
+    UI["🖥️ Streamlit UI / CLI Engine"]
+    
+    %% Supervisor Layer
+    SUP["🤖 Supervisor Agent (LangGraph)"]
+    
+    %% Sub-Agents Layer
+    CR["📚 Code Review Agent (RAG)"]
+    SEC["🛡️ Security & Risk Agent"]
+    ML["🔮 PR Merge Predictor (ML)"]
+    
+    %% Guardrails & Reflection
+    REF["🚨 Reflection & Output Guardrails"]
 
+    %% Flow Connections
+    UI --> SUP
+    SUP --> CR
+    SUP --> SEC
+    SUP --> ML
+    
+    CR --> REF
+    SEC --> REF
+    ML --> REF
 
+    %% Styling
+    style UI fill:#2b5c8f,stroke:#fff,stroke-width:2px,color:#fff
+    style SUP fill:#1a73e8,stroke:#fff,stroke-width:2px,color:#fff
+    style CR fill:#34a853,stroke:#fff,stroke-width:2px,color:#fff
+    style SEC fill:#ea4335,stroke:#fff,stroke-width:2px,color:#fff
+    style ML fill:#fbbc05,stroke:#fff,stroke-width:2px,color:#333
+    style REF fill:#8e24aa,stroke:#fff,stroke-width:2px,color:#fff
 ---
 
 ## 📂 Project Structure
